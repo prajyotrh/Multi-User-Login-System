@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="../../../assets/login_img.svg" height="100%" width="100%">
+        </div>
+        <div class="col-md-4 mt-3 mb-2">
+            <h3 class="text-success text-center"><b>Welcome To Code logic</b></h3>
+
+            <form action="" class="mt-5 p-5">
+                <h5 class="text-primary mb-3">Login </h5>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username" [(ngModel)]="username">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" [(ngModel)]="password">
+                    <label for="floatingPassword">Password</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <select class="form-select" id="floatingSelect" aria-label="Role" name="role" [(ngModel)]="role">
+                      <option *ngFor="let r of roles" [value]="r">{{r}}</option>
+                    </select>
+                    <label for="floatingSelect">Role</label>
+                  </div>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-outline-success me-md-2" type="button" (click)="login()" >Login</button>
+                  </div>
+
+                  <a routerLink="/signup" class="text-primary" style="text-decoration: none;">Need account ? </a>
+            </form>
+
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+</div>
